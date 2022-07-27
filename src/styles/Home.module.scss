@@ -1,0 +1,6 @@
+@use 'src/styles/vars.scss' as vars;
+
+.container {
+  background-color: vars.$black;
+  min-height: 100vh;
+}
