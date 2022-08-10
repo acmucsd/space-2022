@@ -1,0 +1,77 @@
+@use "src/styles/vars.scss" as vars;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.heroContainer {
+    background-image: linear-gradient(vars.$blue, 40%, vars.$pink);
+    min-height: 100vh;
+    font-family: Rubik, sans-serif;
+
+    .title{
+        width: 808px;
+        height: 364px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .spaceship{
+        background-repeat: no-repeat;
+        width: 190px;
+        height: 260px;
+        margin-top: -185px;
+        margin-left: 615px;
+    }
+
+    .heroDescription{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+
+        .heroSubtitle{
+            color: vars.$white;
+            font-size: 40px;
+            font-weight: bolder;
+            margin-top: -50px;
+            margin-bottom: 12px;
+        }
+
+        .heroInfo{
+            color: vars.$white;
+            font-size: 20px;
+        }
+
+    }
+    .planet{
+        width: 325px;
+        height: 325px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .trail{
+        width: 500px;
+        height: 150px;
+        margin-left: 90px;
+        margin-top: -80px;
+        position: relative;
+        transform: scaleX(1.38);
+    }
+    
+    .registerButton{
+        color: #110F47;
+        font-weight: bolder;
+        background: none;
+        border: 3px solid;
+        border-radius: 8px;
+        margin-top: 10px;
+        
+    }
+}

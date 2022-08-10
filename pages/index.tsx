@@ -8,7 +8,7 @@ import style from 'src/styles/Home.module.scss';
 const Home: NextPage = () => {
   return (
     <div className={style.container}>
-      <Hero />
+      <Hero/>
       <About />
       <FAQ />
       <Companies />
