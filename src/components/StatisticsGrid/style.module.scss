@@ -1,0 +1,27 @@
+.StatisticsGrid {
+  color: #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  place-items: center;
+  margin-top: 65px; // temp for navbar spacing
+
+  &_item {
+    border-left: 8px solid #f0f0f0;
+    padding-left: 25px;
+    padding-top: 15px;
+    width: 210px;
+    > h1 {
+      font-size: 70px;
+      font-family: "Rubik", sans-serif;
+      text-transform: capitalize;
+      line-height: 50px;
+    }
+
+    > h3 {
+      font-size: 23px;
+      font-family: "Rubik", sans-serif;
+      text-transform: capitalize;
+      margin-bottom: 19px;
+    }
+  }
+}
