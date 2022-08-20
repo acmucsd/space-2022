@@ -1,4 +1,3 @@
-import React from "react";
 import StatisticsGrid from "src/components/StatisticsGrid";
 
 const AboutStatistics: React.FC = () => {

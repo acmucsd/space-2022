@@ -1,19 +1,18 @@
-import React from "react";
 import Typist from "react-text-typist";
 import AboutStarImage from "public/about-images/about-star.png";
 import s from "./style.module.scss";
 
 const AboutDescription: React.FC = () => {
   return (
-    <section className={s.about__description}>
+    <section className={s.container}>
       <Typist
-        className={s.about__description__header}
+        className={s.header}
         sentences={["Shoot for the stars"]}
         typingSpeed={40}
         loop={false}
         hideCursorOnFinish
       />
-      <div className={s.about__description__block}>
+      <div className={s.description}>
         <div>
           <br />
           <span>Through SPACE, students and recruiters </span>
@@ -30,7 +29,7 @@ const AboutDescription: React.FC = () => {
         </div>
         <img
           src={AboutStarImage.src}
-          className={s["about__description__block__star-img"]}
+          className={s.img}
           alt="About Star Image"
         />
       </div>

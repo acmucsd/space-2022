@@ -1,24 +1,10 @@
-import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import "./style.module.scss";
 
 const Particle: React.FC = () => {
-  const particlesInit = async (main: any) => {
-    console.log(main);
-
-    await loadFull(main);
-  };
-
-  const particlesLoaded = async (container: any) => {
-    console.log(container);
-  };
-
   return (
     <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
+      init={async (main: any) => await loadFull(main)}
       options={{
         particles: {
           number: {

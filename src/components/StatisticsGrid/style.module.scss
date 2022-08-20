@@ -1,11 +1,11 @@
-.StatisticsGrid {
+.container {
   color: #f0f0f0;
   display: grid;
   grid-template-columns: repeat(4, 23%);
   place-items: center;
   margin-top: 65px; // temp for navbar spacing
 
-  &_item {
+  .item {
     border-left: 8px solid #f0f0f0;
     padding-left: 25px;
     padding-top: 15px;

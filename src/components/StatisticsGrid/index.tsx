@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./style.module.scss";
 
 const statistics = [
@@ -10,9 +9,9 @@ const statistics = [
 
 const StatisticsLabel: React.FC = () => {
   return (
-    <div className={s.StatisticsGrid}>
+    <div className={s.container}>
       {statistics.map((stat, index) => (
-        <div className={s.StatisticsGrid_item} key={index}>
+        <div className={s.item} key={index}>
           <h1>{stat.value}</h1>
           <h3>{stat.label}</h3>
         </div>
