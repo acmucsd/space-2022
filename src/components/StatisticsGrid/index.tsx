@@ -7,7 +7,7 @@ const statistics = [
   { label: "Statistic", value: 1 },
 ];
 
-const StatisticsLabel: React.FC = () => {
+const StatisticsGrid: React.FC = () => {
   return (
     <div className={s.container}>
       {statistics.map((stat, index) => (
@@ -20,4 +20,4 @@ const StatisticsLabel: React.FC = () => {
   );
 };
 
-export default StatisticsLabel;
+export default StatisticsGrid;
