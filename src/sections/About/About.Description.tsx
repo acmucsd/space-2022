@@ -4,7 +4,7 @@ import s from "./style.module.scss";
 
 const AboutDescription: React.FC = () => {
   return (
-    <section className={s.container}>
+    <section className={s.description}>
       <Typist
         className={s.header}
         sentences={["Shoot for the stars"]}
@@ -12,7 +12,7 @@ const AboutDescription: React.FC = () => {
         loop={false}
         hideCursorOnFinish
       />
-      <div className={s.description}>
+      <div className={s.block}>
         <div>
           <br />
           <span>Through SPACE, students and recruiters </span>
