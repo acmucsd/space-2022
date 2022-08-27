@@ -1,7 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-const Particle: React.FC = () => {
+const StarCanvas: React.FC = () => {
   return (
     <Particles
       init={async (main: any) => await loadFull(main)}
@@ -118,4 +118,4 @@ const Particle: React.FC = () => {
   );
 };
 
-export default Particle;
+export default StarCanvas;

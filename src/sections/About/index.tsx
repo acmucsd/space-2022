@@ -1,13 +1,15 @@
-import AboutStatistics from "./About.Statistics";
-import AboutDescription from "./About.Description";
+import StatisticsGrid from "src/components/StatisticsGrid";
+import AboutDescription from "src/components/AboutDescription";
 import s from "./style.module.scss";
 
 const About: React.FC = () => {
   return (
-    <div className={s.container}>
-      <AboutStatistics />
-      <AboutDescription />
-    </div>
+    <section className={s.container}>
+      <div className={s.content}>
+        <StatisticsGrid />
+        <AboutDescription />
+      </div>
+    </section>
   );
 };
 
