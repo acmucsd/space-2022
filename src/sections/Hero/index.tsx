@@ -16,9 +16,6 @@ const Hero: React.FC = () => {
       <div className = {s.spaceship}>
         <Image src={spaceship} alt="spaceship"></Image>
       </div>
-      <div className = {s.planet}>
-        <Image src={planet} alt="planet"></Image>
-      </div>
       <div className = {s.trail}>
         <Image src={trail} alt="trail"></Image>
       </div>
@@ -29,6 +26,9 @@ const Hero: React.FC = () => {
           <div>November 15th, 2022 @ TBD</div>
           <button className = {s.registerButton}>Register Today!</button>
         </div>
+      </div>
+      <div className = {s.planet}>
+        <Image src={planet} alt="planet"></Image>
       </div>
     </div>
   

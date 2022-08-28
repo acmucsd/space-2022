@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .heroContainer {
-    background-image: linear-gradient(180deg, #100b44 15%, #9d7587 98%);
+    background-image: linear-gradient(180deg, #100b44 15%, #a78590 98%);
     min-height: 100vh;
     font-family: Rubik, sans-serif;
 
@@ -38,7 +38,7 @@
             color: vars.$white;
             font-size: 40px;
             font-weight: bolder;
-            margin-top: -50px;
+            margin-top: -20px;
             margin-bottom: 12px;
         }
 
@@ -51,9 +51,8 @@
     .planet{
         width: 325px;
         height: 325px;
-        position: fixed;
-        bottom: 0;
-        right: 0;
+        margin-left: auto;
+        margin-top: -225px;
     }
     
     .trail{
