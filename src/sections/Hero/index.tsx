@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         <Image src={trail} alt="trail"></Image>
       </div>
       <div className = {s.heroDescription}>
-        <div className = {s.heroSubtitle}>StartuP: ACM&aposs Career Expo</div>
+        <div className = {s.heroSubtitle}>StartuP: ACM&apos;s Career Expo</div>
         <div className = {s.heroInfo}>
           <div>Price Center West Ballroom</div>
           <div>November 15th, 2022 @ TBD</div>
