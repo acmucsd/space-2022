@@ -7,28 +7,11 @@
     min-height: 100vh;
     font-family: Rubik, sans-serif;
 
-    .title{
-        width: 808px;
-        height: 364px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 100px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .spaceship{
-        background-repeat: no-repeat;
-        width: 190px;
-        height: 260px;
-        margin-top: -185px;
-        margin-left: 615px;
-    }
-
     .heroDescription{
         display: flex;
         margin-left: auto;
         margin-right: auto;
+        margin-top: -300px;
         justify-content: center;
         flex-direction: column;
         text-align: center;
@@ -48,22 +31,6 @@
         }
 
     }
-    .planet{
-        width: 325px;
-        height: 325px;
-        margin-left: auto;
-        margin-top: -225px;
-    }
-    
-    .trail{
-        width: 500px;
-        height: 150px;
-        margin-left: 90px;
-        margin-top: -80px;
-        position: relative;
-        transform: scaleX(1.38);
-    }
-    
     .registerButton{
         color: #110F47;
         font-weight: bolder;
