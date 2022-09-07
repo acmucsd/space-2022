@@ -10,6 +10,7 @@
 
     .heroTitle{
         position: absolute;
+        z-index: 0;
     }
 
     .heroDescription{
@@ -17,7 +18,6 @@
         text-align: center;
         justify-content: center;
         flex-direction: column;
-        position: relative;
         margin-top: 425px;
         
         .heroSubtitle{
@@ -47,7 +47,8 @@
     .heroPlanet{
         width: 400px;
         height: 400px;
-        margin-left: auto;
-        margin-top: -230px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 }
