@@ -12,8 +12,8 @@ const Home: NextPage = () => {
     <main>
       <StarCanvas />
       <Hero />
-      <FAQ />
       <About />
+      <FAQ />
       <Companies />
     </main>
   );

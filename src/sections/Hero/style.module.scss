@@ -10,20 +10,35 @@
 
     .heroTitle{
         position: absolute;
-        z-index: 0;
+        top: 5%;
+        z-index: 1;
     }
 
-    .heroDescription{
+    .heroPlanet{
+        max-width: 60vh;
+        max-height: 60vh;
+        position: absolute;
+        top: 60%;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+   .heroDescription{
         display: flex;
         text-align: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 425px;
+        position: absolute;
+        bottom: 17%;
+        left: 50%;
+        margin-left: -275px;
+        z-index: 2;
         
         .heroSubtitle{
             color: vars.$white;
             font-size: 40px;
-            font-weight: bolder;
+            font-weight: bolder; 
             margin-top: -20px;
             margin-bottom: 12px;
         }
@@ -35,20 +50,12 @@
 
     }
     .registerButton{
-        color: #110F47;
+        color: white;
         font-weight: bolder;
-        background: none;
+        background: #110F47;
         border: 3px solid;
+        border-color: #110F47;
         border-radius: 8px;
         margin-top: 10px;
-        
-    }
-
-    .heroPlanet{
-        width: 400px;
-        height: 400px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
     }
 }
