@@ -28,9 +28,10 @@
         display: flex;
         text-align: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column;  
         position: absolute;
-        bottom: 17%;
+        height: 100vh;
+        margin-top: 145px;
         left: 50%;
         margin-left: -275px;
         z-index: 2;
