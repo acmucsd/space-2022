@@ -10,7 +10,7 @@
 
     .heroTitle{
         position: absolute;
-        top: 5%;
+        top: 18%;
         z-index: 1;
     }
 
@@ -31,17 +31,17 @@
         flex-direction: column;  
         position: absolute;
         height: 100vh;
-        margin-top: 145px;
-        left: 50%;
-        margin-left: -275px;
+        width: 100vw;
+        margin-top: 11vw;
+        padding: 0 2rem;
         z-index: 2;
         
         .heroSubtitle{
+            line-height: 100%;
+            margin-top: 6rem;
             color: vars.$white;
             font-size: 40px;
             font-weight: bolder; 
-            margin-top: -20px;
-            margin-bottom: 12px;
         }
 
         .heroInfo{
