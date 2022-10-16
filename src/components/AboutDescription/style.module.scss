@@ -1,15 +1,14 @@
 .container {
   color: #f0f0f0;
-  width: 95%;
   margin-top: 25px;
-  margin-left: 45px;
+  margin: 2rem;
 
   .header {
     font-family: "Rubik", sans-serif;
     font-weight: 600;
-    font-size: 77px;
+    font-size: 70px;
     color: #ff8181;
-    line-height: 85px;
+    line-height: 90px;
     letter-spacing: 2px;
   }
 
@@ -17,19 +16,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 80px;
 
-    span {
+    > span {
       font-weight: 400;
       font-family: "Lato", sans-serif;
       font-size: 33px;
       line-height: 40px;
       color: #ffffff;
+      margin-top: 20px;
     }
 
     .img {
       width: 400px;
       margin-right: 120px;
     }
+  }
+  @media only screen and (max-width: 1024px) {
+    .header {
+      line-height: 60px;
+    }
+    .descriptionBlock {
+      > span {
+        font-size: 25px;
+        margin-top: 20px;
+      }
+
+      .img {
+        width: 300px;
+        margin-right: 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .header {
+      font-size: 50px;
+    }
+    .descriptionBlock {
+      flex-direction: column;
+      row-gap: 25px;
+      justify-content: center;
+
+      .img {
+        margin-top: 20px;
+      }
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    margin: 2rem 0;
   }
 }
