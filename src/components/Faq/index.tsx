@@ -1,28 +1,67 @@
 import React from "react";
-import Panel from "./panel";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import s from "./style.module.scss";
 
-interface FAQProps{
+interface panelData {
   panelTitles: Array<string>;
-  panelContents: Array<string>;
+  panelContent: Array<string>;
 }
-
-const Faq: React.FC<FAQProps> = ({panelTitles, panelContents}) => {
-
+const Faq: React.FC<panelData> = ({panelTitles, panelContent}) => {
   return (
-    <div className={s.faq}>
-      {
-        panelTitles.map((title, label) => {
-          return ( <Panel
-            panelTitle={title}
-            key={label}
-            panelContent={panelContents[label]}
-          /> );
+    <>
+        {panelTitles.map((title, index) => {
+          if(index === panelTitles.length - 1){
+            return (
+              <>
+                <Accordion sx = {{ 
+                  borderTop: 3,
+                  borderBottom: 3,
+                  bgcolor: 'transparent',
+                  color: 'white',
+                  boxShadow: 'none',
+                }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon className = {s.header}/>}>
+                    <Typography className = {s.header}>{title}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography className = {s.description}>
+                      <p dangerouslySetInnerHTML={{ __html: panelContent[index]}}/>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </>
+            )
+          }
+          else{
+            return (
+              <>
+                <Accordion sx = {{ 
+                  borderTop: 3,
+                  bgcolor: 'transparent',
+                  color: 'white',
+                  boxShadow: 'none',
+                }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon className = {s.header}/>}>
+                    <Typography className = {s.header}>{title}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography className = {s.description}>
+                      <p dangerouslySetInnerHTML={{ __html: panelContent[index]}}/>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </>
+            ) 
+          }
         })
       }
-    </div>
+    </>
   )
-};
+}
 
 export default Faq;

@@ -6,7 +6,7 @@
         },
         {
             "question" : "How do I attend?",
-            "answer" : "You can sign up for SPACE at [link]. We’ll send out more information as soon as we can confirm your attendance."
+            "answer" : "You can sign up for SPACE <a href ='https://acmurl.com/space-registration'>here</a>. We’ll send out more information as soon as we can confirm your attendance."
         },
         {
             "question" : "Who can attend?",
