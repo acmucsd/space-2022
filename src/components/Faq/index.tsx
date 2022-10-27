@@ -29,8 +29,8 @@ const Faq: React.FC<panelData> = ({panelTitles, panelContent}) => {
                     <Typography className = {s.header}>{title}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography className = {s.description}>
-                      <p dangerouslySetInnerHTML={{ __html: panelContent[index]}}/>
+                    <Typography component="div" className = {s.description}>
+                      <div dangerouslySetInnerHTML={{ __html: panelContent[index]}}/>
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -50,8 +50,8 @@ const Faq: React.FC<panelData> = ({panelTitles, panelContent}) => {
                     <Typography className = {s.header}>{title}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography className = {s.description}>
-                      <p dangerouslySetInnerHTML={{ __html: panelContent[index]}}/>
+                    <Typography component="div" className = {s.description}>
+                      <div dangerouslySetInnerHTML={{ __html: panelContent[index]}}/>
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
