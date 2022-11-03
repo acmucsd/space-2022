@@ -1,0 +1,22 @@
+.ship{
+    width: 65px;
+    height: 50px;
+    margin-left: 2.5%;
+    margin-top: 10px;
+}
+
+.sections{
+    font-family: "Rubik", sans-serif;
+    font-weight: bolder
+}
+
+
+@media only screen and (max-width: 768px){
+    .ship{
+        width: 65px;
+        height: 50px;
+        margin-left: 30%;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+}
