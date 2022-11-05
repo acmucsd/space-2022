@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react';
 import s from './style.module.scss'
 
 
-const pages = ['About', 'Registration', 'FAQ', 'Companies'];
+const pages = ['Registration', 'About', 'FAQ', 'Companies'];
 
 const Navbar: React.FC = () => {
   const theme = createTheme({
