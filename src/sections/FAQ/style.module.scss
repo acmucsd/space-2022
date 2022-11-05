@@ -19,34 +19,6 @@
         font-size: 65px;
     }
 
-    .faqSubtitles{
-        font-size: 25px;
-        font-weight: bolder;
-        display: flex;
-        flex-direction: row;
-        margin-top: -20px;
-        margin-bottom: 15px;
-        
-        .faqButton{
-            padding-right: 20px;
-            background: none;
-            border: none;
-            color: #8E90A4;
-        }
-
-        .faqButton:hover{
-            cursor: pointer;
-            color: white;
-        }
-
-        .activatedButton{
-            padding-right: 20px;
-            background: none;
-            border: none;
-            color: #FF8181;
-        }
-    }
-
     .faqBox{
         margin-top: 20px;
         max-width: 900px;
