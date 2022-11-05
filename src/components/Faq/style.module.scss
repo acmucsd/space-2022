@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
+@use "src/styles/vars.scss" as vars;
 
 .header{
   background-color: transparent;
-  color: white;
+  color: vars.$white;
   font-family: Rubik, sans-serif;
   font-size: 1.25rem;
   font-weight: bolder;
@@ -12,88 +11,12 @@
 }
 
 .description{
-  color: white;
+  color: vars.$white;
   font-family: Rubik, sans-serif;
   font-size: 1rem;
   font-weight: bolder;
   
-  a{
-    color: white;
-  }
-  a:visited{
-    color: white;
-  }
-  a:hover{
+  a, a:visited, a:hover{
     color: white;
   }
 }
-// .faq {
-//     margin: 0 auto;
-//     font-family: Rubik, sans-serif;
-//     font-size: 1.25rem;
-//     font-weight: bolder;
-// }
-
-// .header {
-//     color: #fff;
-//     background-color: transparent;
-//     cursor: pointer;
-//     padding: 18px;
-//     text-align: left;
-//     border: none;
-//     outline: none;
-//     transition: 0.4s;
-//     width: 100%;
-//     display: inline-block;
-//     font-family: Rubik, sans-serif;
-//     font-size: 1.25rem;
-// }
-  
-//   .panel {
-//     border-top: 5px solid white;
-    
-//   }
-  
-//   .panel:last-child {
-//     border-bottom: 5px solid white;
-//   }
-  
-//   .arrow {
-//     float: right;
-//     margin-left: 5px;
-//     transition: 1ms all ease-in;
-//     -webkit-transition: 300ms all ease-in;
-//     img {
-//       height: 15px;
-//     }
-//   }
-  
-//   .content {
-//     color: white;
-//     overflow: hidden;
-//     text-align: left;
-//     transition: max-height 0.2s ease-out;
-  
-//     a {
-//       text-decoration: underline;
-//     }
-  
-//     a:hover {
-//       color: blue;
-//     }
-  
-//     a:visited {
-//       color: white;
-//     }
-//   }
-  
-//   @media only screen and (max-width: 600px) {
-//     .faq {
-//       font-size: 1rem;
-//     }
-  
-//     .header {
-//       font-size: 1rem;
-//       padding: 12px 5px;
-//     }
-// }
