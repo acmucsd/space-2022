@@ -10,6 +10,7 @@ interface panelData {
   data: {question: string; answer: string|any}[];
 }
 const Faq: React.FC<panelData> = ({ data }) => {
+
   const [expandedIndex, setExpandedIndex] = useState<Number>(-1);
 
   const handleChange =
@@ -28,10 +29,12 @@ const Faq: React.FC<panelData> = ({ data }) => {
               boxShadow: 'none',
             }} key = {questionObject.question}>
               <AccordionSummary expandIcon={<ExpandMoreIcon className = {s.header}/>}>
-                <Typography className = {s.header}>{questionObject.question}</Typography>
+                <Typography sx = {{ fontSize: 20, fontWeight: 'bold'}}>
+                  {questionObject.question}
+                </Typography>
               </AccordionSummary>
-              <AccordionDetails>
-                <Typography component="div" className = {s.description}>
+              <AccordionDetails className = {s.description}>
+                <Typography component="div" sx = {{ fontSize: 20, fontWeight: 'bold'}}>
                   <div>{questionObject.answer}</div>
                 </Typography>
               </AccordionDetails>
