@@ -7,6 +7,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Toolbar from '@mui/material/Toolbar';
+import Dialog from '@mui/material/Dialog';
+import CloseIcon from '@mui/icons-material/Close';
 import { alpha } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
@@ -36,13 +39,14 @@ const Navbar: React.FC = () => {
     });
   },[]);
 
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
+  const [mobileOpen, setOpen] = useState(false);
+
+  const handleMobileOpen = () => {
+    setOpen(true);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
+
+  const handleMobileClose = () => {
+    setOpen(false);
   };
 
   if(width > 768){
@@ -55,28 +59,16 @@ const Navbar: React.FC = () => {
             <img src = "asset/nav_spaceship.png" className = {s.ship}/>
             <Box sx = {{display: 'flex', flexDirection: 'row'}}>
               {pages.map((page, index) => {
-                if(index == pages.length -1){
-                  return(
-                    <Typography sx = {{
-                      color: 'white',
-                      marginTop: 3,
-                      marginRight: 6
-                    }} key = {index} className = {s.sections}>{page}
-                    </Typography>
-                  )
-                }
-                else{
-                  return(
-                    <Typography sx = {{
-                      color: 'white',
-                      marginTop: 3,
-                      marginRight: 4
-                    }} key = {index} className = {s.sections}>{page}
-                    </Typography>
-                  )
-                }
-                })}
-              </Box>
+                return(
+                  <Typography sx = {{
+                    color: 'white',
+                    marginTop: 3,
+                    marginRight: index == pages.length - 1 ? 6 : 4
+                  }} key = {index} className = {s.sections}>{page}
+                  </Typography>
+                )
+              })}
+            </Box>
             </Box>
           </Container>
         </AppBar>
@@ -85,8 +77,10 @@ const Navbar: React.FC = () => {
     )
   }
   else{
+
     return(
       <>
+        <ThemeProvider theme={theme}>
         <AppBar color="transparent" sx = {{boxShadow: 'none'}}>
         <Container maxWidth = "xl">
           <Box sx = {{ display: 'flex', flexDirection: 'row'}}>
@@ -97,7 +91,7 @@ const Navbar: React.FC = () => {
               color="primary"
               aria-label="open drawer"
               sx={{ mr: 2 }}
-              onClick ={handleClick}
+              onClick ={handleMobileOpen}
             >
             <MenuIcon />
             </IconButton>
@@ -106,17 +100,30 @@ const Navbar: React.FC = () => {
           </Box>
         </Container>
         </AppBar>
-        <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
+        <Dialog
+          fullScreen
+          open={mobileOpen}
+          onClose={handleMobileClose}
+          PaperProps = {{
+            style: {
+              backgroundColor: 'blue'
+            }
+          }}
         >
-          {pages.map((page, index) => (<MenuItem onClick={handleClose} key={index}>{page}</MenuItem>))}
-        </Menu>
+          <Toolbar>
+            <IconButton
+                edge="start"
+                color="primary"
+                onClick={handleMobileClose}
+                aria-label="close"
+            >
+            <CloseIcon/>
+            </IconButton>
+            <img src = "asset/nav_spaceship.png" className = {s.ship}/>
+          </Toolbar>
+          {pages.map((page, index) => (<MenuItem onClick={handleMobileClose} key={index}>{page}</MenuItem>))}
+        </Dialog>
+        </ThemeProvider>
       </>
     )
   }
