@@ -1,9 +1,8 @@
 @use "src/styles/vars.scss" as vars;
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 .heroContainer {
-    background-image: linear-gradient(180deg, #100b44 15%, #a78590 98%);
+    background-image: linear-gradient(180deg, vars.$blue 15%, #a78590 98%);
     min-height: 100vh;
     font-family: Rubik, sans-serif;
     padding-top: 10px;
@@ -53,9 +52,9 @@
     .registerButton{
         color: white;
         font-weight: bolder;
-        background: #110F47;
+        background: vars.$blue;
         border: 3px solid;
-        border-color: #110F47;
+        border-color: vars.$blue;
         border-radius: 8px;
         margin-top: 10px;
     }
