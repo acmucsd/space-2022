@@ -1,7 +1,7 @@
 .container {
   color: #f0f0f0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   place-items: center;
 
   .item {

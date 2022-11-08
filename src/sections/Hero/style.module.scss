@@ -1,56 +1,54 @@
 @use "src/styles/vars.scss" as vars;
 
-
 .heroContainer {
-    background-image: linear-gradient(180deg, vars.$blue 15%, #a78590 98%);
-    min-height: 100vh;
-    font-family: Rubik, sans-serif;
-    padding-top: 10px;
+  background-image: linear-gradient(180deg, vars.$blue 15%, vars.$pink 98%);
+  min-height: 100vh;
+  font-family: Rubik, sans-serif;
 
-    .heroTitle{
-        position: absolute;
-        top: 18%;
-        z-index: 1;
-    }
+  .heroTitle {
+    position: absolute;
+    top: 18%;
+    z-index: 1;
+  }
 
-    .heroPlanet{
-        max-width: 60vh;
-        max-height: 60vh;
-        position: absolute;
-        top: 60%;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
-    }
-    
-   .heroDescription{
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      flex-direction: column;  
-      position: absolute;
-      height: 100vh;
-      width: 100vw;
-      margin-top: 11vw;
-      padding: 0 2rem;
-      z-index: 2;
-        
-      .heroSubtitle{
-          line-height: 100%;
-          margin-top: 6rem;
-          color: vars.$white;
-          font-size: 40px;
-          font-weight: bolder; 
-      }
+  .heroPlanet {
+    max-width: 60vh;
+    max-height: 60vh;
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
 
-      .heroInfo{
-          color: vars.$white;
-          font-size: 20px;
-      }
+  .heroDescription {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 11vw;
+    padding: 0 2rem;
+    z-index: 2;
 
     .heroSubtitle {
       line-height: 100%;
-      margin-top: 20VW;
+      margin-top: 6rem;
+      color: vars.$white;
+      font-size: 40px;
+      font-weight: bolder;
+    }
+
+    .heroInfo {
+      color: vars.$white;
+      font-size: 20px;
+    }
+
+    .heroSubtitle {
+      line-height: 100%;
+      margin-top: 5vw;
       color: vars.$white;
       font-size: 40px;
       font-weight: bolder;
@@ -63,7 +61,7 @@
   }
   .registerButton {
     text-decoration: none;
-    padding: 9.7333px 33.4667px;
+    padding: 10px 32px;
     color: white;
     font-weight: bolder;
     background: vars.$blue;
@@ -71,7 +69,7 @@
     border-color: vars.$blue;
     border-radius: 9.86667px;
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 1rem;
     font-size: 1.5rem;
     transition: 0.3s ease;
 
