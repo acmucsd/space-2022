@@ -1,7 +1,7 @@
 import s from "./style.module.scss";
 
 const statistics = [
-  { label: "Students", value: "600+" },
+  { label: "Students", value: "250+" },
   { label: "Companies", value: 8 },
 ];
 

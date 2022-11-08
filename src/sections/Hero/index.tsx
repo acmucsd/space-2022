@@ -5,20 +5,13 @@ const Hero: React.FC = () => {
     <>
       <div className={s.heroContainer}>
         <img src="asset/hero_title.png" alt="hero" className={s.heroTitle} />
-        <img
-          src="asset/hero_planet.png"
-          alt="planet"
-          className={s.heroPlanet}
-        />
+        <img src="asset/hero_planet.png" alt="planet" className={s.heroPlanet} />
         <div className={s.heroDescription}>
-          <div className={s.heroSubtitle}>StartuP: ACM&apos;s Career Expo</div>
+          <div className={s.heroSubtitle}>ACM at UCSD&apos;s Annual Career Fair</div>
           <div className={s.heroInfo}>
             <div>Price Center West Ballroom</div>
-            <div>November 15th, 2022 @ TBD</div>
-            <a
-              className={s.registerButton}
-              href="https://acmurl.com/space-registration"
-            >
+            <div>November 15th, 2022 (10am to 4pm)</div>
+            <a className={s.registerButton} href="https://acmurl.com/space-registration">
               Register Today!
             </a>
           </div>
