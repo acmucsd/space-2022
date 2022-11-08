@@ -1,7 +1,7 @@
 @use "src/styles/vars.scss" as vars;
 
 .container {
-  background: linear-gradient(180deg, vars.$pink 20%, vars.$blue 85%);
+  background: linear-gradient(180deg, vars.$pink 0%, vars.$blue 95%);
   min-height: 100vh;
   padding: 40px;
 
