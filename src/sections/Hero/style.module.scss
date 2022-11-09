@@ -11,14 +11,22 @@
     z-index: 1;
   }
 
+  @keyframes float {
+    from {
+      transform: translateY(-30px);
+    }
+    to {
+      transform: translateY(20px);
+    }
+  }
   .heroPlanet {
     max-width: 60vh;
     max-height: 60vh;
     position: absolute;
     top: 60%;
-    bottom: 0;
     right: 0;
-    z-index: 1;
+    z-index: 0;
+    animation: 3s float alternate-reverse infinite;
   }
 
   .heroDescription {

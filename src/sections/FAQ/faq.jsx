@@ -28,10 +28,6 @@ const data = {
         "Our lineup of companies will be announced soon on social media and updated here on this page!",
     },
     {
-      question: "Will there be free swag?",
-      answer: "Yup, we’ll be giving out free SPACE T-shirts! (while supplies last though :>)",
-    },
-    {
       question: "Should I bring my resume?",
       answer: (
         <p>
