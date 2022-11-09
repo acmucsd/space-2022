@@ -6,7 +6,7 @@ const AboutDescription: React.FC = () => {
     <div className={s.container}>
       <Typist
         className={s.header}
-        sentences={["Shoot for the stars", "Anthony is cool", "The sky is the limit."]}
+        sentences={["Shoot for the stars", "Achieve your dreams"]}
         typingSpeed={70}
         loop={true}
         startDelay={2000}
