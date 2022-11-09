@@ -6,22 +6,22 @@ const AboutDescription: React.FC = () => {
     <div className={s.container}>
       <Typist
         className={s.header}
-        sentences={["Shoot for the stars"]}
-        typingSpeed={40}
-        loop={false}
+        sentences={["Shoot for the stars", "Achieve your dreams"]}
+        typingSpeed={70}
+        loop={true}
+        startDelay={2000}
+        pauseTime={5000}
+        cursorSmooth
+        deletingSpeed={60}
         hideCursorOnFinish
       />
       <div className={s.descriptionBlock}>
         <span>
-          Through SPACE, students and recruiters can connect and interact with
-          each other regarding professional opportunities such as internships,
-          full or part-time positions, and student programs.
+          Through SPACE, students and recruiters can connect and interact with each other regarding
+          professional opportunities such as internships, full or part-time positions, and student
+          programs.
         </span>
-        <img
-          src="asset/about-star.png"
-          className={s.img}
-          alt="About Star Image"
-        />
+        <img src="asset/about-star.png" className={s.img} alt="About Star Image" />
       </div>
     </div>
   );
