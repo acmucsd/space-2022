@@ -1,39 +1,38 @@
+@use "src/styles/vars.scss" as vars;
+
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  margin-top: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  margin-top: 4rem;
   row-gap: 1.7rem;
-  column-gap: 20px;
+  column-gap: 1.25rem;
 
   .companyItem {
-    background: #d9d9d9;
-    border-radius: 20px;
+    background: vars.$grey;
+    border-radius: 1.25rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 32px 32px 12px 32px;
+    padding: 2rem 2rem 0.75rem 2rem;
     text-decoration: none;
 
     &:hover {
       transform: scale(1.03);
       transition: 0.5s ease-in-out;
     }
-    > h5 {
+    > .companyName {
       margin: 0;
-      font-family: "Rubik", sans-serif;
       font-style: normal;
       font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
+      font-size: 1.12rem;
+      line-height: 1.2rem;
       color: #120e46;
-      text-align: center;
     }
 
-    .img {
-      height: auto;
+    .companyLogo {
+      height: 6rem;
       overflow: hidden;
-      width: 55%;
     }
   }
 
@@ -41,6 +40,6 @@
     .companyItem {
       width: 80vw;
     }
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
   }
 }
