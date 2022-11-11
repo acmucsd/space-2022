@@ -34,7 +34,7 @@ const companies = [
   },
   {
     name: "Flock Freight",
-    logo: "",
+    logo: "asset/FlockFreight_logo.png",
     link: "https://www.flockfreight.com/",
     alt: "Flock Freight Company Sponsor Logo",
   },
