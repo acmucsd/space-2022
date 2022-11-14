@@ -1,12 +1,12 @@
 import s from "./style.module.scss";
 
 const companies = [
-  {
-    name: "Shield AI",
-    logo: "",
-    link: "https://shield.ai/",
-    alt: "Shield AI Company Sponsor Logo",
-  },
+  // {
+  //   name: "Shield AI",
+  //   logo: "",
+  //   link: "https://shield.ai/",
+  //   alt: "Shield AI Company Sponsor Logo",
+  // },
   {
     name: "MaXentric",
     logo: "asset/MaXentric_logo.png",
@@ -38,12 +38,12 @@ const companies = [
     link: "https://www.flockfreight.com/",
     alt: "Flock Freight Company Sponsor Logo",
   },
-  {
-    name: "ASML",
-    logo: "",
-    link: "https://www.asml.com/en",
-    alt: "ASML Company Sponsor Logo",
-  },
+  // {
+  //   name: "ASML",
+  //   logo: "",
+  //   link: "https://www.asml.com/en",
+  //   alt: "ASML Company Sponsor Logo",
+  // },
 ];
 
 const CompaniesGrid: React.FC = () => {

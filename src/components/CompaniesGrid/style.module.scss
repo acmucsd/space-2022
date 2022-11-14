@@ -31,6 +31,8 @@
     }
 
     .companyLogo {
+      object-fit: contain;
+      width: 80%;
       height: 6rem;
       overflow: hidden;
     }
