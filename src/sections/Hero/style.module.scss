@@ -1,61 +1,91 @@
 @use "src/styles/vars.scss" as vars;
 
-
 .heroContainer {
-    background-image: linear-gradient(180deg, vars.$blue 15%, #a78590 98%);
-    min-height: 100vh;
-    font-family: Rubik, sans-serif;
-    padding-top: 10px;
+  background-image: linear-gradient(180deg, vars.$blue 15%, vars.$pink 98%);
+  min-height: 100vh;
+  font-family: Rubik, sans-serif;
 
-    .heroTitle{
-        position: absolute;
-        top: 18%;
-        z-index: 1;
+  .heroTitle {
+    position: absolute;
+    top: 18%;
+    z-index: 1;
+  }
+
+  @keyframes float {
+    from {
+      transform: translateY(-30px);
+    }
+    to {
+      transform: translateY(20px);
+    }
+  }
+  .heroPlanet {
+    max-width: 60vh;
+    max-height: 60vh;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    z-index: 0;
+    animation: 3s float alternate-reverse infinite;
+  }
+
+  .heroDescription {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 11vw;
+    padding: 0 2rem;
+    z-index: 2;
+
+    .heroSubtitle {
+      line-height: 100%;
+      margin-top: 6rem;
+      color: vars.$white;
+      font-size: 40px;
+      font-weight: bolder;
     }
 
-    .heroPlanet{
-        max-width: 60vh;
-        max-height: 60vh;
-        position: absolute;
-        top: 60%;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
+    .heroInfo {
+      color: vars.$white;
+      font-size: 20px;
     }
 
-   .heroDescription{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        flex-direction: column;  
-        position: absolute;
-        height: 100vh;
-        width: 100vw;
-        margin-top: 11vw;
-        padding: 0 2rem;
-        z-index: 2;
-        
-        .heroSubtitle{
-            line-height: 100%;
-            margin-top: 6rem;
-            color: vars.$white;
-            font-size: 40px;
-            font-weight: bolder; 
-        }
-
-        .heroInfo{
-            color: vars.$white;
-            font-size: 20px;
-        }
-
+    .heroSubtitle {
+      line-height: 100%;
+      margin-top: 5vw;
+      color: vars.$white;
+      font-size: 40px;
+      font-weight: bolder;
     }
-    .registerButton{
-        color: white;
-        font-weight: bolder;
-        background: vars.$blue;
-        border: 3px solid;
-        border-color: vars.$blue;
-        border-radius: 8px;
-        margin-top: 10px;
+
+    .heroInfo {
+      color: vars.$white;
+      font-size: 20px;
     }
+  }
+  .registerButton {
+    text-decoration: none;
+    padding: 10px 32px;
+    color: white;
+    font-weight: bolder;
+    background: vars.$blue;
+    border: 3px solid;
+    border-color: vars.$blue;
+    border-radius: 9.86667px;
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: #c78f8f;
+      box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.31);
+      border-color: #c78f8f;
+      cursor: pointer;
+    }
+  }
 }

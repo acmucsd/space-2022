@@ -44,28 +44,39 @@ const Navbar: React.FC = () => {
     setOpen(true);
   };
 
-  const handleMobileClose = (e) => {
+  const handleMobileClose = () => {
     setOpen(false);
-    if(e.target.innerText === 'Registration'){
+  }
+  const handleMobileRedirect = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    setOpen(false);
+    const input = e.target as HTMLElement;
+    if(input.innerText === 'Registration'){
       window.scrollTo(0,0);
     }
-    else if(e.target.innerText === 'About'){
+    else if(input.innerText === 'About'){
       window.scrollTo(0,600);
     }
-    else if(e.target.innerText === 'FAQ'){
+    else if(input.innerText === 'FAQ'){
       window.scrollTo(0,1750);
+    }
+    else if(input.innerText === 'Companies'){
+      window.scrollTo(0,2400);
     }
   };
 
-  const handleDesktopClose = (e) => {
-    if(e.target.innerText === 'Registration'){
+  const handleDesktopRedirect = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const input = e.target as HTMLElement;
+    if(input.innerText === 'Registration'){
       window.scrollTo(0,0);
     }
-    else if(e.target.innerText === 'About'){
+    else if(input.innerText === 'About'){
       window.scrollTo(0,650);
     }
-    else if(e.target.innerText === 'FAQ'){
+    else if(input.innerText === 'FAQ'){
       window.scrollTo(0,1250);
+    }
+    else if(input.innerText === 'Companies'){
+      window.scrollTo(0,2025);
     }
   };
 
@@ -83,7 +94,7 @@ const Navbar: React.FC = () => {
                   <MenuItem sx = {{
                     color: 'white',
                     marginRight: index == pages.length - 1 ? 3 : 2
-                  }} onClick = {handleDesktopClose} key = {index} className = {s.sections}>{page}
+                  }} onClick = {handleDesktopRedirect} key = {index} className = {s.sections}>{page}
                   </MenuItem>
                 )
               })}
@@ -140,7 +151,7 @@ const Navbar: React.FC = () => {
             </IconButton>
             <img src = "asset/nav_spaceship.png" className = {s.shipDialog}/>
           </Toolbar>
-            {pages.map((page, index) => (<MenuItem onClick={handleMobileClose} sx = {{ color: 'white', ml: 'auto', mr: 'auto'  }} key={index}>{page}</MenuItem>))}
+            {pages.map((page, index) => (<MenuItem onClick={handleMobileRedirect} sx = {{ color: 'white', ml: 'auto', mr: 'auto'  }} key={index}>{page}</MenuItem>))}
         </Dialog>
         </ThemeProvider>
       </>

@@ -1,5 +1,13 @@
+import CompaniesGrid from "src/components/CompaniesGrid";
+import s from "./style.module.scss";
+
 const Companies: React.FC = () => {
-  return <div></div>
-}
+  return (
+    <section className={s.container}>
+      <h1>Participating Companies</h1>
+      <CompaniesGrid />
+    </section>
+  );
+};
 
 export default Companies;
