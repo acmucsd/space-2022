@@ -1,12 +1,12 @@
 import s from "./style.module.scss";
 
 const companies = [
-  // {
-  //   name: "Shield AI",
-  //   logo: "",
-  //   link: "https://shield.ai/",
-  //   alt: "Shield AI Company Sponsor Logo",
-  // },
+  {
+    name: "Shield AI",
+    logo: "asset/shield.svg",
+    link: "https://shield.ai/",
+    alt: "Shield AI Company Sponsor Logo",
+  },
   {
     name: "MaXentric",
     logo: "asset/MaXentric_logo.png",
@@ -22,7 +22,7 @@ const companies = [
 
   {
     name: "LPL Financial",
-    logo: "asset/LplFinancial_logo.png",
+    logo: "asset/lpl.png",
     link: "https://www.lpl.com/",
     alt: "LPL Financial Company Sponsor Logo",
   },
