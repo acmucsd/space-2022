@@ -5,7 +5,6 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Dialog from '@mui/material/Dialog';
@@ -45,8 +44,29 @@ const Navbar: React.FC = () => {
     setOpen(true);
   };
 
-  const handleMobileClose = () => {
+  const handleMobileClose = (e) => {
     setOpen(false);
+    if(e.target.innerText === 'Registration'){
+      window.scrollTo(0,0);
+    }
+    else if(e.target.innerText === 'About'){
+      window.scrollTo(0,600);
+    }
+    else if(e.target.innerText === 'FAQ'){
+      window.scrollTo(0,1750);
+    }
+  };
+
+  const handleDesktopClose = (e) => {
+    if(e.target.innerText === 'Registration'){
+      window.scrollTo(0,0);
+    }
+    else if(e.target.innerText === 'About'){
+      window.scrollTo(0,650);
+    }
+    else if(e.target.innerText === 'FAQ'){
+      window.scrollTo(0,1250);
+    }
   };
 
   if(width > 768){
@@ -60,12 +80,11 @@ const Navbar: React.FC = () => {
             <Box sx = {{display: 'flex', flexDirection: 'row'}}>
               {pages.map((page, index) => {
                 return(
-                  <Typography sx = {{
+                  <MenuItem sx = {{
                     color: 'white',
-                    marginTop: 3,
-                    marginRight: index == pages.length - 1 ? 6 : 4
-                  }} key = {index} className = {s.sections}>{page}
-                  </Typography>
+                    marginRight: index == pages.length - 1 ? 3 : 2
+                  }} onClick = {handleDesktopClose} key = {index} className = {s.sections}>{page}
+                  </MenuItem>
                 )
               })}
             </Box>
@@ -106,7 +125,7 @@ const Navbar: React.FC = () => {
           onClose={handleMobileClose}
           PaperProps = {{
             style: {
-              backgroundColor: 'blue'
+              backgroundColor: '#110F47'
             }
           }}
         >
@@ -119,9 +138,9 @@ const Navbar: React.FC = () => {
             >
             <CloseIcon/>
             </IconButton>
-            <img src = "asset/nav_spaceship.png" className = {s.ship}/>
+            <img src = "asset/nav_spaceship.png" className = {s.shipDialog}/>
           </Toolbar>
-          {pages.map((page, index) => (<MenuItem onClick={handleMobileClose} key={index}>{page}</MenuItem>))}
+            {pages.map((page, index) => (<MenuItem onClick={handleMobileClose} sx = {{ color: 'white', ml: 'auto', mr: 'auto'  }} key={index}>{page}</MenuItem>))}
         </Dialog>
         </ThemeProvider>
       </>

@@ -1,59 +1,61 @@
 @use "src/styles/vars.scss" as vars;
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 .heroContainer {
-  background-image: linear-gradient(180deg, #100b44 15%, #a78590 98%);
-  min-height: 100vh;
-  font-family: Rubik, sans-serif;
+    background-image: linear-gradient(180deg, vars.$blue 15%, #a78590 98%);
+    min-height: 100vh;
+    font-family: Rubik, sans-serif;
+    padding-top: 10px;
 
-  .heroTitle {
-    position: absolute;
-    top: 18%;
-    z-index: 1;
-  }
-
-  .heroPlanet {
-    max-width: 60vh;
-    max-height: 60vh;
-    position: absolute;
-    top: 60%;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-  }
-
-  .heroDescription {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    padding: 6rem 2rem 0 2rem;
-    z-index: 2;
-
-    .heroSubtitle {
-      line-height: 100%;
-      margin-top: 20vw;
-      color: vars.$white;
-      font-size: 40px;
-      font-weight: bolder;
+    .heroTitle{
+        position: absolute;
+        top: 18%;
+        z-index: 1;
     }
 
-    .heroInfo {
-      color: vars.$white;
-      font-size: 20px;
+    .heroPlanet{
+        max-width: 60vh;
+        max-height: 60vh;
+        position: absolute;
+        top: 60%;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
     }
-  }
-  .registerButton {
-    color: white;
-    font-weight: bolder;
-    background: #110f47;
-    border: 3px solid;
-    border-color: #110f47;
-    border-radius: 8px;
-    margin-top: 10px;
-  }
+
+   .heroDescription{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;  
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 11vw;
+        padding: 0 2rem;
+        z-index: 2;
+        
+        .heroSubtitle{
+            line-height: 100%;
+            margin-top: 6rem;
+            color: vars.$white;
+            font-size: 40px;
+            font-weight: bolder; 
+        }
+
+        .heroInfo{
+            color: vars.$white;
+            font-size: 20px;
+        }
+
+    }
+    .registerButton{
+        color: white;
+        font-weight: bolder;
+        background: vars.$blue;
+        border: 3px solid;
+        border-color: vars.$blue;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
 }
